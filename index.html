@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BH - Hamburguesas y Burritos Artesanales</title>
+    <meta name="description" content="Las mejores hamburguesas y burritos de la ciudad. Servicio a domicilio y sucursales físicas. Abierto de 7 AM a 11 PM.">
+    <meta name="keywords" content="hamburguesas, burritos, comida rápida, delivery, restaurante">
+    
+    <meta property="og:title" content="BH - Hamburguesas y Burritos Artesanales">
+    <meta property="og:description" content="Las mejores hamburguesas y burritos de la ciudad. Servicio a domicilio y sucursales físicas.">
+    
+    <meta name="twitter:title" content="BH - Hamburguesas y Burritos Artesanales">
+    <meta name="twitter:description" content="Las mejores hamburguesas y burritos de la ciudad. Servicio a domicilio y sucursales físicas.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #d4533c;
+            --secondary-color: #f8f9fa;
+            --accent-color: #1a1a1a;
+            --text-dark: #1a1a1a;
+            --text-light: #6b7280;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            background-color: #ffffff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-dark);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            box-shadow: 0 2px 8px rgba(212, 83, 60, 0.15);
+        }
+        
+        .btn-primary:hover {
+            background-color: #c24836;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 83, 60, 0.25);
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: rgba(212, 83, 60, 0.2);
+        }
+        
+        .glassmorphism {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25d366;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/babel" src="components/Sidebar.js"></script>
+    <script type="text/babel" src="components/HeroCarousel.js"></script>
+    <script type="text/babel" src="components/HoursSection.js"></script>
+    <script type="text/babel" src="components/MenuPreview.js"></script>
+    <script type="text/babel" src="components/MenuSection.js"></script>
+    <script type="text/babel" src="components/ReviewsSection.js"></script>
+    <script type="text/babel" src="components/ContactSection.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
